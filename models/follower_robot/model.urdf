@@ -74,13 +74,15 @@
         <parent link="base" />
     </joint>
 
-    <plugin name="follower_robot_controller" filename="libgazebo_ros_planar_move.so">
-        <robotNamespace>follower_robot</robotNamespace>
-        <commandTopic>motion_command</commandTopic>
-        <odometryTopic>odom</odometryTopic>
-        <odometryFrame>base</odometryFrame>
-        <odometryRate>20</odometryRate>
-        <robotBaseFrame>base</robotBaseFrame>
-    </plugin>
+    <gazebo>
+        <plugin name="follower_robot_controller" filename="libgazebo_ros_planar_move.so">
+            <robotNamespace>follower_robot</robotNamespace>
+            <commandTopic>motion_command</commandTopic>
+            <odometryTopic>odom</odometryTopic>
+            <odometryFrame>base</odometryFrame>
+            <odometryRate>20</odometryRate>
+            <robotBaseFrame>base</robotBaseFrame>
+        </plugin>
+    </gazebo>
 
 </robot>
