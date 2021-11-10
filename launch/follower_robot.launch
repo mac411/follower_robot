@@ -1,0 +1,6 @@
+<launch>
+    <param name="/use_sim_time" value="true" />
+    <arg name="world" default="/home/marc/ecse/test_ws/src/follower_robot/worlds/simulation_environment.world" />
+    <node name="gazebo" pkg="gazebo_ros" type="gazebo" args="--verbose $(arg world)" required="true" output="screen"/>
+    <node name="image_view" pkg="rqt_image_view" type="rqt_image_view" args="image:=/follower_robot/camera1/image_topic" />
+</launch>

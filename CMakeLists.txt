@@ -12,7 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   gazebo_ros
-  sdformat
+#  sdformat
 )
 
 ## System dependencies are found with CMake's conventions
@@ -161,7 +161,7 @@ include_directories(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-catkin_install_python(PROGRAMS scripts/robot.py scripts/controller.py
+catkin_install_python(PROGRAMS scripts/robot.py scripts/controller.py scripts/robot_1.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
